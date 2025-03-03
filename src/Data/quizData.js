@@ -22,6 +22,10 @@ const quizData=[{
     question:"Which protocol is used to send emails",
     options:["FTP","HTTP","IP","SMTP"],
     answer:4
+},{
+    question:"",
+    options:[],
+    answer:0
 }];
 
 export default quizData;

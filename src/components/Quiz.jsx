@@ -26,7 +26,7 @@ function Quiz() {
                 <div className="text-white text-4xl font-bold">QUIZ APP</div>
                 <div className="bg-white h-1/2 w-96 mt-8 flex items-center flex-col rounded-md ">
                     <div className="shadow mt-6 mb-3 p-4">
-                        <span>{q_no+1}. </span>
+                        <span>{q_no===6?"":q_no+1}. </span>
                         <span>{quizData[q_no].question}</span>
                     </div>
                     <div className="flex flex-col">
@@ -34,7 +34,7 @@ function Quiz() {
                             return <button className="border m-1 p-1" style={{backgroundColor:clickedOption===i+1&&"lightgreen"}} onClick={()=>{setClickOption(i+1)}}>{option}</button>
                         })}
                     </div>
-                    <button className="border-2 border-blue-300 text-2xl font-semibold bg-blue-300 m-2 p-2" onClick={changeQues}>{q_no==5?"Start Again":"Next"}</button>
+                    <button className="border-2 border-blue-300 text-2xl font-semibold bg-blue-300 m-2 p-2" onClick={changeQues}>{q_no==6?"Start Again":"Next"}</button>
                     <div className="text-xl p-1">your score: {score}</div>
                     
                 </div>
